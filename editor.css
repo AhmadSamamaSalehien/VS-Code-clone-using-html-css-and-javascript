@@ -1,0 +1,294 @@
+/* Monaco Editor Specific Styles */
+.monaco-editor {
+    --vscode-editor-background: var(--bg-primary) !important;
+    --vscode-editor-foreground: var(--text-primary) !important;
+}
+
+/* Line Numbers */
+.monaco-editor .line-numbers {
+    color: var(--text-muted) !important;
+}
+
+/* Selection */
+.monaco-editor .selected-text {
+    background-color: var(--accent-primary) !important;
+}
+
+/* Cursor */
+.monaco-editor .cursor {
+    background-color: var(--text-primary) !important;
+}
+
+/* Minimap */
+.monaco-editor .minimap {
+    background-color: var(--bg-secondary) !important;
+}
+
+/* Scrollbars for Monaco */
+.monaco-editor .decorationsOverviewRuler {
+    background-color: var(--bg-secondary) !important;
+}
+
+.monaco-editor .scroll-decoration {
+    background-color: var(--bg-tertiary) !important;
+}
+
+/* Suggestion Widget */
+.monaco-editor .suggest-widget {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+.monaco-editor .suggest-widget .monaco-list .monaco-list-row.focused {
+    background-color: var(--accent-primary) !important;
+    color: white !important;
+}
+
+/* Context Menu */
+.monaco-editor .context-view {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+}
+
+.monaco-editor .monaco-menu .monaco-action-bar .action-item {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+}
+
+.monaco-editor .monaco-menu .monaco-action-bar .action-item:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+/* Find Widget */
+.monaco-editor .find-widget {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.monaco-editor .find-widget input {
+    background-color: var(--bg-tertiary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Parameter Hints */
+.monaco-editor .parameter-hints-widget {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Hover Widget */
+.monaco-editor .monaco-hover {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Bracket Matching */
+.monaco-editor .bracket-match {
+    background-color: rgba(0, 122, 204, 0.2) !important;
+    border: 1px solid var(--accent-primary) !important;
+}
+
+/* Current Line Highlight */
+.monaco-editor .current-line {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Word Highlighting */
+.monaco-editor .wordHighlight {
+    background-color: rgba(87, 87, 87, 0.72) !important;
+}
+
+.monaco-editor .wordHighlightStrong {
+    background-color: rgba(14, 99, 156, 0.72) !important;
+}
+
+/* Indentation Guides */
+.monaco-editor .lines-content .cigr {
+    box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.15) inset !important;
+}
+
+.monaco-editor .lines-content .cigra {
+    box-shadow: 1px 0 0 0 rgba(255, 255, 255, 0.4) inset !important;
+}
+
+/* Error and Warning Squiggles */
+.monaco-editor .redsquiggly {
+    border-bottom: 2px dotted var(--error-color) !important;
+}
+
+.monaco-editor .greensquiggly {
+    border-bottom: 2px dotted var(--warning-color) !important;
+}
+
+/* Overwrite Mode */
+.monaco-editor.vs-dark .cursor {
+    background-color: var(--text-primary) !important;
+}
+
+/* Editor Groups */
+.monaco-editor .editor-group-container {
+    background-color: var(--bg-primary) !important;
+}
+
+/* Quick Open Widget */
+.monaco-workbench .quick-open-widget {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Progress Bar */
+.monaco-editor .monaco-progress-container {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.monaco-editor .monaco-progress-container .progress-bit {
+    background-color: var(--accent-primary) !important;
+}
+
+/* Editor Tabs Integration */
+.editor-tabs {
+    background-color: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.editor-tab {
+    background-color: var(--bg-tertiary) !important;
+    border-right: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.editor-tab.active {
+    background-color: var(--bg-primary) !important;
+    border-bottom: 2px solid var(--accent-primary) !important;
+}
+
+/* Diff Editor */
+.monaco-diff-editor .diffOverview {
+    background-color: var(--bg-secondary) !important;
+}
+
+.monaco-diff-editor .diffInserted {
+    background-color: rgba(137, 209, 133, 0.2) !important;
+}
+
+.monaco-diff-editor .diffRemoved {
+    background-color: rgba(241, 76, 76, 0.2) !important;
+}
+
+/* Editor Layout */
+.editor-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.editor-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+/* File Icons in Editor */
+.file-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.file-icon.html {
+    color: #e34c26;
+}
+
+.file-icon.css {
+    color: #1572b6;
+}
+
+.file-icon.js {
+    color: #f7df1e;
+}
+
+.file-icon.json {
+    color: #85c5e7;
+}
+
+.file-icon.md {
+    color: #083fa1;
+}
+
+/* Loading State */
+.editor-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: var(--bg-primary);
+    color: var(--text-muted);
+}
+
+.editor-loading i {
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Editor Focus */
+.monaco-editor.focused {
+    outline: none;
+}
+
+/* Custom Themes */
+.monaco-editor .token.keyword {
+    color: #569cd6 !important;
+}
+
+.monaco-editor .token.string {
+    color: #ce9178 !important;
+}
+
+.monaco-editor .token.comment {
+    color: #6a9955 !important;
+}
+
+.monaco-editor .token.number {
+    color: #b5cea8 !important;
+}
+
+.monaco-editor .token.operator {
+    color: #d4d4d4 !important;
+}
+
+.monaco-editor .token.tag {
+    color: #569cd6 !important;
+}
+
+.monaco-editor .token.attribute.name {
+    color: #92c5f8 !important;
+}
+
+.monaco-editor .token.attribute.value {
+    color: #ce9178 !important;
+}
+
+.monaco-editor .token.delimiter {
+    color: #808080 !important;
+}

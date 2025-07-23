@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Code Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>Code Editor</span>
+                </div>
+            </div>
+            <div class="header-center">
+                <div class="window-controls">
+                    <div class="control close"></div>
+                    <div class="control minimize"></div>
+                    <div class="control maximize"></div>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-primary" id="openFileBtn">
+                    <i class="fas fa-folder-open"></i>
+                    Open File
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Sidebar -->
+            <div class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Explorer</h3>
+                    <div class="sidebar-actions">
+                        <button class="btn-icon" id="newFileBtn" title="New File">
+                            <i class="fas fa-file-plus"></i>
+                        </button>
+                        <button class="btn-icon" id="newFolderBtn" title="New Folder">
+                            <i class="fas fa-folder-plus"></i>
+                        </button>
+                        <button class="btn-icon" id="refreshBtn" title="Refresh">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="file-explorer" id="fileExplorer">
+                    <div class="empty-state">
+                        <i class="fas fa-folder-open"></i>
+                        <p>No files or folders</p>
+                        <small>Create a new file or folder to get started</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resize Handle -->
+            <div class="resize-handle" id="resizeHandle"></div>
+
+            <!-- Editor Area -->
+            <div class="editor-area">
+                <!-- Tabs -->
+                <div class="tabs-container" id="tabsContainer">
+                    <div class="tabs" id="tabs"></div>
+                </div>
+
+                <!-- Editor -->
+                <div class="editor-container">
+                    <div class="editor-welcome" id="editorWelcome">
+                        <div class="welcome-content">
+                            <h1>Welcome to Code Editor</h1>
+                            <p>A VS Code-inspired web-based editor</p>
+                            <div class="welcome-actions">
+                                <button class="btn btn-primary" id="welcomeOpenFile">
+                                    <i class="fas fa-folder-open"></i>
+                                    Open File
+                                </button>
+                                <button class="btn btn-secondary" id="welcomeNewFile">
+                                    <i class="fas fa-file-plus"></i>
+                                    New File
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="monaco-editor-container" id="monacoEditor" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span id="statusLanguage">Plain Text</span>
+                <span id="statusEncoding">UTF-8</span>
+            </div>
+            <div class="status-right">
+                <span id="statusLine">Ln 1, Col 1</span>
+                <span id="statusSpaces">Spaces: 2</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Context Menu -->
+    <div class="context-menu" id="contextMenu">
+        <div class="context-item" data-action="rename">
+            <i class="fas fa-edit"></i>
+            Rename
+        </div>
+        <div class="context-item" data-action="delete">
+            <i class="fas fa-trash"></i>
+            Delete
+        </div>
+        <div class="context-separator"></div>
+        <div class="context-item" data-action="copy-path">
+            <i class="fas fa-copy"></i>
+            Copy Path
+        </div>
+    </div>
+
+    <!-- Hidden File Input -->
+    <input type="file" id="fileInput" multiple accept=".html,.css,.js,.txt,.json,.md" style="display: none;">
+
+    <!-- Monaco Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.44.0/min/vs/loader.min.js"></script>
+    
+    <!-- Application Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
